@@ -7,27 +7,15 @@
  */
 public class Book
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class Book
-     */
-    public Book()
-    {
-        // initialise instance variables
-        x = 0;
+    private String catalogueNumber;
+    private String title;
+    private String author;
+    public Book(String catalogueNumber,String title,String author){
+        this.catalogueNumber = catalogueNumber;
+        this.title = title;
+        this.author = author;
     }
-
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    public String toString(){
+        return "Book(" + catalogueNumber + "," + title + "," + author + ")";
     }
 }

@@ -9,14 +9,17 @@ public class Loan
 {
     private int loanDate;
     private int returnDate;
-    public Loan(){
+    public Loan(int loanDate,int returnDate){
+        this.loanDate = loanDate;
+        this.returnDate = returnDate;
+    }
+    public String toString(){
+        return "Laon(" + loanDate + "," + returnDate + ")";
     }
     public add(Loan){
     
     }
     public detach(){
     
-    }
-    public String toString(){
     }
 }
