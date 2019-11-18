@@ -1,19 +1,19 @@
 
 /**
- * Write a description of class Test here.
+ * Write a description of class Borrower here.
  *
  * @author (your name)
  * @version (a version number or a date)
  */
-public class Test
+public class Borrower
 {
     // instance variables - replace the example below with your own
     private int x;
 
     /**
-     * Constructor for objects of class Test
+     * Constructor for objects of class Borrower
      */
-    public Test()
+    public Borrower()
     {
         // initialise instance variables
         x = 0;
