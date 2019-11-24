@@ -7,15 +7,28 @@
  */
 public class Book
 {
-    private String catalogueNumber;
+    private int CatalogueNumber;
     private String title;
     private String author;
-    public Book(String catalogueNumber,String title,String author){
-        this.catalogueNumber = catalogueNumber;
+    private Loan loan;
+    public Book(int CatalogueNumber, String title, String author){
+        this.CatalogueNumber = CatalogueNumber;
         this.title = title;
         this.author = author;
     }
     public String toString(){
-        return "Book(" + catalogueNumber + "," + title + "," + author + ")";
+        return "Book(" + CatalogueNumber + "," + title + "," + author + ")";
+    }
+    public void Check(int CatalogueNumber, String title, String author){
+        
+    }
+    public void getBook(int CatalogueNumber){
+        
+    }
+    public void getBook(){
+    }
+    public void delLoan(){
+    }
+    public void display(Book book){
     }
 }
