@@ -18,7 +18,7 @@ public class Borrower
     }
 
     public boolean Check(String name){
-
+        return true;
     }
 
     public void getBorrower(String name){
@@ -26,11 +26,7 @@ public class Borrower
     }
 
     public boolean addloan(Loan loan){
-
-    }
-
-    public void getBorrower(String name){
-
+        return true;
     }
 
     public void delLoan(){
