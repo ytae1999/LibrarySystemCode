@@ -25,7 +25,7 @@ public class Borrower
 
     }
 
-    public boolean addloan(Loan loan){
+    public boolean addLoan(Loan loan){
         return true;
     }
 

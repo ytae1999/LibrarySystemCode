@@ -20,11 +20,11 @@ public class Library
 
     }
 
-    public void RegisterOneBook(String title,String author,int CatalogueNumber){
+    public void RegisterOneBook(String title, String author, int CatalogueNumber){
 
     }
 
-    public void LendOneBook(String name,int CatalogueNumber){
+    public void LendOneBook(String name, int CatalogueNumber){
 
     }
 
