@@ -11,8 +11,32 @@ public class Library
     public Library(String name){
         this.name = name;
     }
+
     public String toString(){
-            return  "Library(" + name + ")";
+        return  "Library(" + name + ")";
     }
-    
+
+    public void RegisterOneBorrower(String name){
+
+    }
+
+    public void RegisterOneBook(String title,String author,int CatalogueNumber){
+
+    }
+
+    public void LendOneBook(String name,int CatalogueNumber){
+
+    }
+
+    public void ReturnOneBook(int CatalogueNumber){
+
+    }
+
+    public void DisplayBooksAvailableForLoan(Book book){
+
+    }
+
+    public void DisplayBooksAvailableOnLoan(Book book){
+
+    }
 }
