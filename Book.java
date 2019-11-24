@@ -11,10 +11,11 @@ public class Book
     private String title;
     private String author;
     private Loan loan;
-    public Book(int CatalogueNumber, String title, String author){
+    public Book(int CatalogueNumber, String title, String author, Loan loan){
         this.CatalogueNumber = CatalogueNumber;
         this.title = title;
         this.author = author;
+        this.loan = loan;
     }
     public String toString(){
         return "Book(" + CatalogueNumber + "," + title + "," + author + ")";
