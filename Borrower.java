@@ -8,9 +8,8 @@ public class Borrower
 {
     private String name;
     private Loan loan;
-    public Borrower(String name,Loan loan){
+    public Borrower(String name){
         this.name = name;
-        this.loan = loan;
     }
 
     public String toString(){
