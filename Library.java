@@ -10,8 +10,7 @@ public class Library
     private String name;
     public Library(String name){
         this.name = name;
-        registeredBooks = new TreeSet<Book>
-        registeredBorrowers = new HashSet<Borrower>
+
     }
 
     public String toString(){
@@ -20,12 +19,12 @@ public class Library
 
     public void RegisterOneBorrower(String name){
         Borrower borrower = new Borrower(name);
-        registeredBorrowers.add(borrower);
+
     }
 
     public void RegisterOneBook(String title, String author, int CatalogueNumber){
         Book book = new Book(title, author, CatalogueNumber);
-        registeredBooks.add(book);
+
     }
 
     public void LendOneBook(String name, int CatalogueNumber){

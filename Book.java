@@ -11,6 +11,7 @@ public class Book
     private String title;
     private String author;
     private Loan loan;
+    
     public Book(int CatalogueNumber, String title, String author){
         this.CatalogueNumber = CatalogueNumber;
         this.title = title;
@@ -26,9 +27,8 @@ public class Book
     public void getBook(int CatalogueNumber){
         
     }
-    public void getBook(){
-    }
     public void delLoan(){
+        this.loan = null;
     }
     public void display(Book book){
     }

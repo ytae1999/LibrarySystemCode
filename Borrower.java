@@ -25,6 +25,7 @@ public class Borrower
     }
 
     public boolean addLoan(Loan loan){
+        this.loan = loan;
         return true;
     }
 
