@@ -12,7 +12,7 @@ public class Book
     private String author;
     private Loan loan;
     
-    public Book(int CatalogueNumber, String title, String author){
+    public Book(String title, String author, int CatalogueNumber){
         this.CatalogueNumber = CatalogueNumber;
         this.title = title;
         this.author = author;
