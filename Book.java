@@ -12,7 +12,7 @@ public class Book
     private String author;
     private Loan loan;
     
-    public Book(int CatalogueNumber, String title, String author){
+    public Book(String title, String author, int CatalogueNumber){
         this.CatalogueNumber = CatalogueNumber;
         this.title = title;
         this.author = author;
@@ -20,7 +20,7 @@ public class Book
     public String toString(){
         return "Book(" + CatalogueNumber + "," + title + "," + author + ")";
     }
-    public void Check(int CatalogueNumber, String title, String author){
+    public void Check(String title, String author, int CatalogueNumber){
         
     }
     public void getBook(int CatalogueNumber){
