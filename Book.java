@@ -16,7 +16,6 @@ public class Book
         this.CatalogueNumber = CatalogueNumber;
         this.title = title;
         this.author = author;
-        
     }
     public String toString(){
         return "Book(" + CatalogueNumber + "," + title + "," + author + ")";

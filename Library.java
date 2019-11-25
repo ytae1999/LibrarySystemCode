@@ -1,4 +1,4 @@
-
+import java.util.*;
 /**
  * Write a description of class Library here.
  *
@@ -11,6 +11,8 @@ public class Library
     public Library(String name){
         this.name = name;
 
+        TreeSet<Book> c = new TreeSet<Book>();
+        HashSet<Borrower> registeredBorrowers = new HashSet<Borrower>();
     }
 
     public String toString(){
@@ -36,10 +38,17 @@ public class Library
     }
 
     public void DisplayBooksAvailableForLoan(Book book){
-
+        Iterator it = registeredBooks.iterator();
+        while(it.hasNext()){
+            Book book = (Book)it.next();
+            if(book.getLoan() == null){
+                book display;
+            }
+        }
     }
-
     public void DisplayBooksAvailableOnLoan(Book book){
 
+    }
+    public void DisplayBooksAvailableOnLoan(Book book){
     }
 }
