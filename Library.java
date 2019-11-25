@@ -19,11 +19,8 @@ public class Library
     }
 
     public void RegisterOneBorrower(String name){
-<<<<<<< HEAD
         Borrower borrower = new Borrower(name);
         registeredBorrowers.add(borrower);
-=======
->>>>>>> 458bb3fc7e062804cc461cad1015751814120355
     }
 
     public void RegisterOneBook(String title, String author, int CatalogueNumber){
