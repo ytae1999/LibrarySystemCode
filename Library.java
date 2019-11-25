@@ -17,7 +17,6 @@ public class Library
     }
 
     public void RegisterOneBorrower(String name){
-
     }
 
     public void RegisterOneBook(String title, String author, int CatalogueNumber){
