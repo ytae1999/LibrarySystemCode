@@ -10,8 +10,8 @@ public class Library
     private String name;
     public Library(String name){
         this.name = name;
-        registeredBooks = new TreeSet<Book>
-        registeredBorrowers = new HashSet<Borrower>
+        TreeSet<Book> registeredBooks = new TreeSet<Book>();
+        HashSet<Borrower> registeredBorrowers = new HashSet<Borrower>();
     }
 
     public String toString(){
@@ -37,7 +37,12 @@ public class Library
     }
 
     public void DisplayBooksAvailableForLoan(Book book){
-
+        Iterator it = registeredBooks.iterator();
+        while(it.hasNext())
+            Book book = (Book)it.next();
+            if(book.getLoan() == null){
+                book display;
+            }
     }
 
     public void DisplayBooksAvailableOnLoan(Book book){
