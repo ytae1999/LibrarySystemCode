@@ -8,6 +8,7 @@ import java.util.*;
 public class Library
 {
     private String name;
+    private TreeSet<Book> registeredBook;
     public Library(String name){
         this.name = name;
         TreeSet<Book> registeredBooks = new TreeSet<Book>();
@@ -24,9 +25,22 @@ public class Library
     }
 
     public void RegisterOneBook(String title, String author, int CatalogueNumber){
+<<<<<<< HEAD
         Book book = new Book(title, author, CatalogueNumber);
         f
 
+=======
+        if(CheckBook(CatalogNumber)){
+            Book book = new Book(title, author, CatalogueNumber);
+            boolean result = registeredBook.add(book);
+            if(result == true){
+                System.out.println("등록되었습니다.");
+            }
+            else{
+                System.out.println("실패하였습니다.");
+            }
+        }
+>>>>>>> 9b8f3a166987f95a4582ea804ff74757ec4e7206
     }
 
     public void LendOneBook(String name, int CatalogueNumber){
@@ -46,7 +60,7 @@ public class Library
             }
         }
     }
-    
+
     public void DisplayBooksAvailableOnLoan(Book book){
     }
 }
