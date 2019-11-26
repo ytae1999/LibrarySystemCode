@@ -56,7 +56,7 @@ public class Library
         while(it.hasNext() == true){
             Book book = (Book)it.next();
             if(book.getLoan() == null){
-                display;
+                display(book);
             }
         }
     }
