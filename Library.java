@@ -38,7 +38,7 @@ public class Library
 
     public void DisplayBooksAvailableForLoan(Book book){
         Iterator it = registeredBooks.iterator();
-        while(it.hasNext()){
+        while(it.hasNext() == true){
             Book book = (Book)it.next();
             if(book.getLoan() == null){
                 display;
