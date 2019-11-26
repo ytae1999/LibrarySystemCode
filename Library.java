@@ -25,14 +25,14 @@ public class Library
     }
 
     public void RegisterOneBook(String title, String author, int CatalogueNumber){
-        if(CheckBook(CatalogNumber)){
+        if(Check(CatalogueNumber)){
             Book book = new Book(title, author, CatalogueNumber);
             boolean result = registeredBook.add(book);
             if(result == true){
                 System.out.println("등록되었습니다.");
             }
             else{
-                System.out.println("실패하였습니다.");
+                System.out.println("등록에 실패하였습니다.");
             }
         }
     }
