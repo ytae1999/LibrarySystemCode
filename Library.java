@@ -26,18 +26,22 @@ public class Library
 
     public void RegisterOneBook(String title, String author, int CatalogueNumber){
 <<<<<<< HEAD
+<<<<<<< HEAD
         Book book = new Book(title, author, CatalogueNumber);
         f
 
 =======
         if(CheckBook(CatalogNumber)){
+=======
+        if(Check(CatalogueNumber)){
+>>>>>>> 8fcc2c750b2d23c7c7ff1c2abe63c21344ca2ea5
             Book book = new Book(title, author, CatalogueNumber);
             boolean result = registeredBook.add(book);
             if(result == true){
                 System.out.println("등록되었습니다.");
             }
             else{
-                System.out.println("실패하였습니다.");
+                System.out.println("등록에 실패하였습니다.");
             }
         }
 >>>>>>> 9b8f3a166987f95a4582ea804ff74757ec4e7206
