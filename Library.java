@@ -41,11 +41,11 @@ public class Library
         while(it.hasNext()){
             Book book = (Book)it.next();
             if(book.getLoan() == null){
-                book display;
+                display;
             }
         }
     }
+    
     public void DisplayBooksAvailableOnLoan(Book book){
-
     }
 }
