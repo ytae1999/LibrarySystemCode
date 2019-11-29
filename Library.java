@@ -8,11 +8,12 @@ import java.util.*;
 public class Library
 {
     private String name;
-    private TreeSet<Book> registeredBook;
     public Library(String name){
         this.name = name;
-        TreeSet<Book> registeredBooks = new TreeSet<Book>();
+        TreeSet<Book> BookCollection = new TreeSet<Book>();
         HashSet<Borrower> registeredBorrowers = new HashSet<Borrower>();
+        ArrayList<Loan> Loans = new ArrayList<Loan>();
+
     }
 
     public String toString(){
@@ -26,19 +27,19 @@ public class Library
     public void RegisterOneBook(String title, String author, int CatalogueNumber){
         Book book = new Book(title, author, CatalogueNumber);
 
-        if(CheckBook(CatalogNumber)){
-            if(Check(CatalogueNumber)){
-                Book book = new Book(title, author, CatalogueNumber);
-                boolean result = registeredBook.add(book);
-                if(result == true){
-                    System.out.println("등록되었습니다.");
-                }
-                else{
-                    System.out.println("등록에 실패하였습니다.");
-                }
+        if(Check(CatalogNumber)){
+              Book book = new Book(title,author, CatalogueNumber);
+              boolean result = registeredBook.add(book);
+              if(result == true){
+                  System.out.println("등록되었습니다.");
+              }
+              else{
+                  System.out.println("등록에 실패하였습니다.");
+              }
             }
         }
     }
+
     public void LendOneBook(String name, int CatalogueNumber){
 
     } 
