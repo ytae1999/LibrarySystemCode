@@ -2,22 +2,18 @@ import java.util.*;
 /**
  * Write a description of class Library here.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author (2018315033태영준,2018210083노승욱, 2018210025현기호, 2018210059송주호)
+ * @version (2019.11.29)
  */
 public class Library
 {
     private String name;
-    private TreeSet<Book> registeredBook;
+    private TreeSet<Book> Books = new TreeSet<Book>();
+    private HashSet<Borrower> registeredBorrowers = new HashSet<Borrower>();
     public Library(String name){
         this.name = name;
-        TreeSet<Book> registeredBooks = new TreeSet<Book>();
-        HashSet<Borrower> registeredBorrowers = new HashSet<Borrower>();
     }
 
-    public String toString(){
-        return  "Library(" + name + ")";
-    }
 
     public void RegisterOneBorrower(String name){
         Borrower borrower = new Borrower(name);
@@ -26,19 +22,19 @@ public class Library
     public void RegisterOneBook(String title, String author, int CatalogueNumber){
         Book book = new Book(title, author, CatalogueNumber);
 
-        if(CheckBook(CatalogNumber)){
-            if(Check(CatalogueNumber)){
-                Book book = new Book(title, author, CatalogueNumber);
-                boolean result = registeredBook.add(book);
-                if(result == true){
-                    System.out.println("등록되었습니다.");
-                }
-                else{
-                    System.out.println("등록에 실패하였습니다.");
-                }
+        if(Check(CatalogNumber)){
+            
+            boolean result = registeredBook.add(book);
+            if(result == true){
+                System.out.println("등록되었습니다.");
+            }
+            else{
+                System.out.println("등록에 실패하였습니다.");
+
             }
         }
     }
+
     public void LendOneBook(String name, int CatalogueNumber){
 
     } 
@@ -46,7 +42,14 @@ public class Library
     public void ReturnOneBook(int CatalogueNumber){
 
     }
-
+    
+    public boolean Check(String name){
+        Iterator it = reg
+    }
+    public boolean Check(int CatalogueNumber){
+        
+    }
+    
     public void DisplayBooksAvailableForLoan(Book book){
         Iterator it = registeredBooks.iterator();
         while(it.hasNext() == true){
@@ -59,4 +62,5 @@ public class Library
 
     public void DisplayBooksAvailableOnLoan(Book book){
     }
+    
 }
