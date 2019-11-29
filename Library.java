@@ -44,7 +44,7 @@ public class Library
     }
     
     public boolean Check(String name){
-        Iterator it = reg
+        Iterator it = 
     }
     public boolean Check(int CatalogueNumber){
         
