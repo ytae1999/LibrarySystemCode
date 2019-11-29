@@ -1,11 +1,9 @@
-
-
 import java.util.HashSet;
 /**
  * Write a description of class Borrower here.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author (2018315033태영준,2018210083노승욱, 2018210025현기호, 2018210059송주호)
+ * @version (2019.11.29)
  */
 public class Borrower
 {
@@ -15,24 +13,15 @@ public class Borrower
         this.name = name;
     }
 
-    public String toString(){
-        return  "Borrower" + name + ")";
+    public Borrower getBorrower(String name){
+        return Borrower;
     }
 
-    public boolean Check(String name){
-        return true;
-    }
-
-    public void getBorrower(String name){
-                                                                                                
-    }
-
-    public boolean addLoan(Loan loan){
+    public void addLoan(Loan loan){
         this.loan = loan;
-        return true;
     }
 
     public void delLoan(){
-
+        this.loan = null; 
     }
 }
