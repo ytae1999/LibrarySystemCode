@@ -13,24 +13,15 @@ public class Borrower
         this.name = name;
     }
 
-    public String toString(){
-        return  "Borrower" + name + ")";
+    public Borrower getBorrower(String name){
+        return Borrower;
     }
 
-    public boolean Check(String name){
-        return true;
-    }
-
-    public void getBorrower(String name){
-                                                                                                
-    }
-
-    public boolean addLoan(Loan loan){
+    public void addLoan(Loan loan){
         this.loan = loan;
-        return true;
     }
 
     public void delLoan(){
-
+        this.loan = null; 
     }
 }

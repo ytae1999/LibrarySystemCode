@@ -17,12 +17,13 @@ public class Book
         this.title = title;
         this.author = author;
     }
-    public void getBook(int CatalogueNumber){
+    public Book getBook(int CatalogueNumber){
         
     }
     public void delLoan(){
         this.loan = null;
     }
     public void display(Book book){
+        
     }
 }

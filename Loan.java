@@ -1,4 +1,4 @@
-import java.util.LinkedList;
+import java.util.ArrayList;
 /**
  * Write a description of class Loan here.
  *
@@ -16,11 +16,5 @@ public class Loan
         this.returnDate = returnDate;
         this.book = book;
         this.borrower = borrower;
-    }
-    public String toString(){
-        return "Laon(" + loanDate + "," + returnDate + ")";
-    }
-    public void delLoan(Loan loan){
-        
     }
 }
