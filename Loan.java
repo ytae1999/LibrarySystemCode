@@ -40,6 +40,13 @@ public class Loan
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    
+    public String findName(int CatalogueNumber){
+        return name;
+    }
+>>>>>>> 4103b05f8958fa54cba213222897d1d91f67b8db
 =======
     
     public String findName(int CatalogueNumber){
