@@ -19,7 +19,7 @@ public class Book
     }
     
     public void addLoan(Loan loan)
-    {
+{
         this.loan = loan;
     }
     
@@ -42,9 +42,14 @@ public class Book
         return this.author;
     }
     
-    public void display(Book book){
-        System.out.println(book.getCatalogueNumber());
-        System.out.println(book.getTitle());
-        System.out.println(book.getAuthor());
+    public Loan getLoan()
+    {
+        return this.loan;
+    }
+    
+    public void display(){
+        System.out.println(this.getCatalogueNumber());
+        System.out.println(this.getTitle());
+        System.out.println(this.getAuthor());
     }   
 }

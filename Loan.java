@@ -29,8 +29,8 @@ public class Loan
         System.out.println(loan.getBorrower());
     }
     
-    public void display(Loan loan){
-        System.out.println(loan.getBorrower().getName());
+    public void display(){
+        System.out.println(this.getBorrower().getName());
     }
     
     public void printReturnDate(){

@@ -49,7 +49,7 @@ public class Library
             Book books = it.next();     
             if(books.getCatalogueNumber() == CatalogueNumber)
             {
-                Book book = books;//빌리려는 책
+                break;
             }     
         } 
         Iterator<Borrower> it2 = registeredBorrowers.iterator();      
@@ -57,23 +57,58 @@ public class Library
             Borrower borrowers = it2.next();     
             if(borrowers.getName() == name)
             {
-                Borrower borrower = borrowers;//빌리려는 이용자
+                break;
             }     
         } 
-        
+        Book book = it.next();
+        Borrower borrower = it2.next();
+        Loan loan = new Loan(book, borrower);
+        Loans.add(loan);
+        book.addLoan(loan);
+        borrower.addLoan(loan);
     }
     
     public void ReturnOneBook(int CatalogueNumber)
     {
-
+        Iterator<Book> it = Books.iterator();      
+        while(it.hasNext()){        
+            Book books = it.next();     
+            if(books.getCatalogueNumber() == CatalogueNumber)
+            {
+                break;
+            }     
+        } 
+        Iterator<Borrower> it2 = registeredBorrowers.iterator();      
+        while(it.hasNext()){        
+            Borrower borrowers = it2.next();     
+            if(borrowers.getName() == name)
+            {
+                break;
+            }     
+        } 
+        Book book = it.next();
+        Borrower borrower = it2.next();
+        Loan loan = new Loan(book, borrower);
+        Loans.add(loan);
+        book.addLoan(loan);
+        borrower.addLoan(loan);
     }
         
 
-    public void DisplayBooksAvailableForLoan(Book book){
-        
+    public void DisplayBooksAvailableForLoan(Book book)
+    {
+        Iterator<Book> it = Books.iterator();      
+        while(it.hasNext()){        
+            Book books = it.next();     
+            if(books.getLoan() != null)
+            {
+                books.display();
+            }     
+        } 
     }
 
-    public void DisplayBooksAvailableOnLoan(Book book){
+    public void DisplayBooksAvailableOnLoan(Book book)
+    {
         
     }
 
