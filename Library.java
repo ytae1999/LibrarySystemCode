@@ -15,13 +15,11 @@ public class Library
         this.name = name;
     }
 
-
     public void RegisterOneBorrower(String name){
         Borrower borrower = new Borrower(name);
     }
 
     public void RegisterOneBook(String title, String author, int CatalogueNumber){
-<<<<<<< HEAD
         Book book = new Book(title, author, CatalogueNumber);
 
         if(CheckBook(CatalogueNumber)){
@@ -36,9 +34,6 @@ public class Library
                 }
             }
         }
-=======
-        
->>>>>>> 571b17dc2f9bf9b1a48e9220dc4a3b18d15b18cf
     }
 
     public void LendOneBook(String name, int CatalogueNumber){
