@@ -1,4 +1,3 @@
-
 import java.util.HashSet;
 /**
  * Write a description of class Borrower here.
@@ -14,31 +13,7 @@ public class Borrower
     public Borrower(String name){
         this.name = name;
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    public Borrower getBorrower(String name){
-        
-        return this.Borrower;
-    }
-    
-=======
 
->>>>>>> 4103b05f8958fa54cba213222897d1d91f67b8db
-=======
-
->>>>>>> 4103b05f8958fa54cba213222897d1d91f67b8db
-=======
-
->>>>>>> 4103b05f8958fa54cba213222897d1d91f67b8db
-=======
-
->>>>>>> 4103b05f8958fa54cba213222897d1d91f67b8db
-=======
-
->>>>>>> 4103b05f8958fa54cba213222897d1d91f67b8db
     public void addLoan(Loan loan){
         this.loan = loan;
     }

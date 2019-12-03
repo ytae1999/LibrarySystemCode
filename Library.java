@@ -78,27 +78,6 @@ public class Library
                 break;
             }     
         } 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        Iterator<Borrower> it2 = registeredBorrowers.iterator();      
-        while(it.hasNext()){        
-            Borrower borrowers = it2.next();     
-            if(borrowers.getName() == name)
-            {
-                break;
-            }     
-        } 
-        Book book = it.next();
-        Borrower borrower = it2.next();
-        Loan loan = new Loan(book, borrower);
-        Loans.add(loan);
-        book.addLoan(loan);
-        borrower.addLoan(loan);
-    }
-=======
         Iterator<Loan> it2 = Loans.iterator();      
         while(it.hasNext()){        
             Loan loans = it2.next();     
@@ -115,139 +94,6 @@ public class Library
                 break;
             }     
         } 
->>>>>>> 4103b05f8958fa54cba213222897d1d91f67b8db
-=======
-        Iterator<Loan> it2 = Loans.iterator();      
-        while(it.hasNext()){        
-            Loan loans = it2.next();     
-            if(loans.findName() == name)
-            {
-                break;
-            }     
-        } 
-        Iterator<Borrower> it3 = registeredBorrowers.iterator();    
-        while(it.hasNext()){        
-            Borrower borrowers = it3.next();     
-            if(borrowers.getName() == name)
-            {
-                break;
-            }     
-        } 
->>>>>>> 4103b05f8958fa54cba213222897d1d91f67b8db
-=======
-        Iterator<Loan> it2 = Loans.iterator();      
-        while(it.hasNext()){        
-            Loan loans = it2.next();     
-            if(loans.findName() == name)
-            {
-                break;
-            }     
-        } 
-        Iterator<Borrower> it3 = registeredBorrowers.iterator();    
-        while(it.hasNext()){        
-            Borrower borrowers = it3.next();     
-            if(borrowers.getName() == name)
-            {
-                break;
-            }     
-        } 
->>>>>>> 4103b05f8958fa54cba213222897d1d91f67b8db
-=======
-        Iterator<Loan> it2 = Loans.iterator();      
-        while(it.hasNext()){        
-            Loan loans = it2.next();     
-            if(loans.findName() == name)
-            {
-                break;
-            }     
-        } 
-        Iterator<Borrower> it3 = registeredBorrowers.iterator();    
-        while(it.hasNext()){        
-            Borrower borrowers = it3.next();     
-            if(borrowers.getName() == name)
-            {
-                break;
-            }     
-        } 
->>>>>>> 4103b05f8958fa54cba213222897d1d91f67b8db
-        
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-        Book book = it.next();
-        Loan loan = it2.next(); 
-        Borrower borrower = it3.next();
-        book.delLoan();
-        borrower.delLoan();
-    }
-        
->>>>>>> 4103b05f8958fa54cba213222897d1d91f67b8db
-=======
-        Book book = it.next();
-        Loan loan = it2.next(); 
-        Borrower borrower = it3.next();
-        book.delLoan();
-        borrower.delLoan();
-    }
-        
->>>>>>> 4103b05f8958fa54cba213222897d1d91f67b8db
-=======
-        Book book = it.next();
-        Loan loan = it2.next(); 
-        Borrower borrower = it3.next();
-        book.delLoan();
-        borrower.delLoan();
-    }
-        
->>>>>>> 4103b05f8958fa54cba213222897d1d91f67b8db
-=======
-        Book book = it.next();
-        Loan loan = it2.next(); 
-        Borrower borrower = it3.next();
-        book.delLoan();
-        borrower.delLoan();
-    }
-        
->>>>>>> 4103b05f8958fa54cba213222897d1d91f67b8db
-
-    public void DisplayBooksAvailableForLoan(Book book)
-    {
-        Iterator<Book> it = Books.iterator();      
-        while(it.hasNext()){        
-            Book books = it.next();     
-            if(books.getLoan() != null)
-            {
-                books.display();
-            }     
-        } 
-    }
-
-    public void DisplayBooksAvailableOnLoan(Book book)
-    {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-        Iterator<Loan> it2 = Loans.iterator();      
-        while(it.hasNext()){        
-            Loan loans = it2.next();     
-            if(loans.findName() == name)
-            {
-                break;
-            }     
-        } 
-        Iterator<Borrower> it3 = registeredBorrowers.iterator();    
-        while(it.hasNext()){        
-            Borrower borrowers = it3.next();     
-            if(borrowers.getName() == name)
-            {
-                break;
-            }     
-        } 
->>>>>>> 4103b05f8958fa54cba213222897d1d91f67b8db
         
         Book book = it.next();
         Loan loan = it2.next(); 
@@ -263,45 +109,12 @@ public class Library
         while(it.hasNext()){        
             Book books = it.next();     
             if(books.getLoan() != null)
-=======
-        Iterator<Book> it = Books.iterator();      
-        while(it.hasNext()){        
-            Book books = it.next();     
-            if(books.getLoan() == null)
->>>>>>> 4103b05f8958fa54cba213222897d1d91f67b8db
-=======
-        Iterator<Book> it = Books.iterator();      
-        while(it.hasNext()){        
-            Book books = it.next();     
-            if(books.getLoan() == null)
->>>>>>> 4103b05f8958fa54cba213222897d1d91f67b8db
-=======
-        Iterator<Book> it = Books.iterator();      
-        while(it.hasNext()){        
-            Book books = it.next();     
-            if(books.getLoan() == null)
->>>>>>> 4103b05f8958fa54cba213222897d1d91f67b8db
-=======
-        Iterator<Book> it = Books.iterator();      
-        while(it.hasNext()){        
-            Book books = it.next();     
-            if(books.getLoan() == null)
->>>>>>> 4103b05f8958fa54cba213222897d1d91f67b8db
             {
                 books.display();
             }     
         } 
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    public String DisplayBorrowersLoanBook(int CatalogueNumber)
-    {
-        return "";
-=======
     public void DisplayBooksAvailableOnLoan(Book book)
     {
         Iterator<Book> it = Books.iterator();      
@@ -312,58 +125,8 @@ public class Library
                 books.display();
             }     
         } 
->>>>>>> 4103b05f8958fa54cba213222897d1d91f67b8db
-=======
-    public String DisplayBorrowersLoanBook(int CatalogueNumber)
-    {
-        Iterator<Loan> it = Loans.iterator();      
-        while(it.hasNext()){        
-            Loan loans = it.next();
-            if(loans.get)
-            return "";
-        } 
->>>>>>> 4103b05f8958fa54cba213222897d1d91f67b8db
-=======
-    public String DisplayBorrowersLoanBook(int CatalogueNumber)
-    {
-        Iterator<Loan> it = Loans.iterator();      
-        while(it.hasNext()){        
-            Loan loans = it.next();
-            if(loans.get)
-            return "";
-        } 
->>>>>>> 4103b05f8958fa54cba213222897d1d91f67b8db
-=======
-    public String DisplayBorrowersLoanBook(int CatalogueNumber)
-    {
-        Iterator<Loan> it = Loans.iterator();      
-        while(it.hasNext()){        
-            Loan loans = it.next();
-            if(loans.get)
-            return "";
-        } 
->>>>>>> 4103b05f8958fa54cba213222897d1d91f67b8db
-=======
-    public String DisplayBorrowersLoanBook(int CatalogueNumber)
-    {
-        Iterator<Loan> it = Loans.iterator();      
-        while(it.hasNext()){        
-            Loan loans = it.next();
-            if(loans.get)
-            return "";
-        } 
->>>>>>> 4103b05f8958fa54cba213222897d1d91f67b8db
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    public String DisplayBooksLoanedByBorrower(String name)
-    {
-        return "";
-=======
     public String DisplayBorrowersLoanBook(int CatalogueNumber)
     {
         Iterator<Loan> it = Loans.iterator();      
@@ -372,38 +135,10 @@ public class Library
             if(loans.get)
             return "";
         } 
->>>>>>> 4103b05f8958fa54cba213222897d1d91f67b8db
     }
-<<<<<<< HEAD
-=======
 
     public String DisplayBooksLoanedByBorrower(String name)
     {
         return "";
     }
->>>>>>> 4103b05f8958fa54cba213222897d1d91f67b8db
-=======
-    public String DisplayBooksLoanedByBorrower(String name)
-    {
-        return "";
-    }
->>>>>>> 4103b05f8958fa54cba213222897d1d91f67b8db
-=======
-    public String DisplayBooksLoanedByBorrower(String name)
-    {
-        return "";
-    }
->>>>>>> 4103b05f8958fa54cba213222897d1d91f67b8db
-=======
-    public String DisplayBooksLoanedByBorrower(String name)
-    {
-        return "";
-    }
->>>>>>> 4103b05f8958fa54cba213222897d1d91f67b8db
-=======
-    public String DisplayBooksLoanedByBorrower(String name)
-    {
-        return "";
-    }
->>>>>>> 4103b05f8958fa54cba213222897d1d91f67b8db
 } 
