@@ -44,7 +44,7 @@ public class Library
         Iterator it = Book.iterator();
         while(it.hasNext() == false){
             Book book = (Book)it.next();
-            if(book.getLoan() /= null)
+            if(book.getLoan() != null)
                 display();
         }
     }
