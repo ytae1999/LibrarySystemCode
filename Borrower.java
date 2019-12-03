@@ -15,11 +15,15 @@ public class Borrower
         this.name = name;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
     public Borrower getBorrower(String name){
         
         return this.Borrower;
     }
     
+=======
+
+>>>>>>> 4103b05f8958fa54cba213222897d1d91f67b8db
 =======
 
 >>>>>>> 4103b05f8958fa54cba213222897d1d91f67b8db
