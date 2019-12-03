@@ -1,4 +1,5 @@
 import java.util.*;
+import java.lang.*;
 /**
  * Write a description of class Library here.
  *
@@ -17,7 +18,7 @@ public class Library
 
     public void RegisterOneBorrower(String name){
         Borrower borrower = new Borrower(name);
-        boolean result = contains(borrower);
+        boolean result = registeredBorrowers.contains(borrower);
         if(result == false){
             registeredBorrowers.add(borrower);
             System.out.println("등록되었습니다.");
@@ -30,7 +31,7 @@ public class Library
 
     public void RegisterOneBook(String title, String author, int CatalogueNumber){
         Book book = new Book(title, author, CatalogueNumber);
-        boolean result = contains(book);
+        boolean result = Books.contains(book);
         if(result == false){
             Books.add(book);
             System.out.println("등록되었습니다.");
@@ -46,17 +47,17 @@ public class Library
         Iterator<Book> it = Books.iterator();      
         while(it.hasNext()){        
             Book books = it.next();     
-            if(books.CatalogueNumber == CatalogueNumber)
+            if(books.getCatalogueNumber() == CatalogueNumber)
             {
-                Book book = getBook();//빌리려는 책
+                Book book = books;//빌리려는 책
             }     
         } 
-        Iterator<Borrower> it = registeredBorrowers.iterator();      
+        Iterator<Borrower> it2 = registeredBorrowers.iterator();      
         while(it.hasNext()){        
-            Borrower borrowers = it.next();     
-            if(books.CatalogueNumber == CatalogueNumber)
+            Borrower borrowers = it2.next();     
+            if(borrowers.getName() == name)
             {
-                Borrower borrower = getBorrower();//빌리려는 이용자
+                Borrower borrower = borrowers;//빌리려는 이용자
             }     
         } 
         
@@ -69,30 +70,20 @@ public class Library
         
 
     public void DisplayBooksAvailableForLoan(Book book){
-        Iterator<Book> it = Books.iterator();      
-        while(it.hasNext()){        
-            Book book = it.next();        
-            if(book.getLoan() == null)          
-                display(book);  
-        }   
+        
     }
 
     public void DisplayBooksAvailableOnLoan(Book book){
-        Iterator<Book> it = Book.iterator();
-        while(it.hasNext()){
-            Book book = it.next();
-            if(book.getLoan() != null)
-                display(book);
-        }
+        
     }
 
     public String DisplayBorrowersLoanBook(int CatalogueNumber)
     {
-        display();
+        return "";
     }
 
     public String DisplayBooksLoanedByBorrower(String name)
     {
-
+        return "";
     }
 } 

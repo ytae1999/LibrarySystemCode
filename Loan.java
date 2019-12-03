@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.time.*;
 /**
  * Write a description of class Loan here.
  *
@@ -7,36 +8,29 @@ import java.util.ArrayList;
  */
 public class Loan
 {
-    private int loanDate;
-    private int returnDate;
+    private LocalDate loanDate;
+    private LocalDate returnDate;
     private Book book;
     private Borrower borrower;
     
-    public Loan(int loanDate, int returnDate, Book book, Borrower borrower){
-        this.loanDate = loanDate;
-        this.returnDate = returnDate;
+    public Loan(Book book, Borrower borrower){
+        this.loanDate = LocalDate.now();
+        this.returnDate = loanDate.plusDays(14);
         this.book = book;
         this.borrower = borrower;
     }
     
-    public void getLoan(int CatalogNumber){
-        return loan;
-    }
-        
-    public void getLoan(String name){
-        return loan;
+    public Borrower getBorrower()
+    {
+        return this.borrower;
     }
     
-    public String findName(int CatalogueNumber){
-        return name;
+    public void getBorrowerName(Loan loan){
+        System.out.println(loan.getBorrower());
     }
     
-    public void getBorrowerName(String name){
-        return 
-    }
-    
-    public void display(){
-        return 
+    public void display(Loan loan){
+        System.out.println(loan.getBorrower().getName());
     }
     
     public void printReturnDate(){

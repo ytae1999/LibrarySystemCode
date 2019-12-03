@@ -14,10 +14,6 @@ public class Borrower
         this.name = name;
     }
 
-    public Borrower getBorrower(String name){
-        return Borrower;
-    }
-
     public void addLoan(Loan loan){
         this.loan = loan;
     }
@@ -27,6 +23,11 @@ public class Borrower
     }
     
     public Loan getLoan(int CatalogueNumber){
-        return loan;
+        return this.loan;
+    }
+    
+    public String getName()
+    {
+        return this.name;
     }
 }

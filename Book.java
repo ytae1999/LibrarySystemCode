@@ -17,16 +17,34 @@ public class Book
         this.title = title;
         this.author = author;
     }
-
-    public Book getBook(int CatalogueNumber){
-        return Book;
+    
+    public void addLoan(Loan loan)
+    {
+        this.loan = loan;
     }
     
     public void delLoan(){
         this.loan = null;
     }
 
+    public int getCatalogueNumber()
+    {
+        return this.CatalogueNumber;
+    }
+    
+    public String getTitle()
+    {
+        return this.title;
+    }
+    
+    public String getAuthor()
+    {
+        return this.author;
+    }
+    
     public void display(Book book){
-        
+        System.out.println(book.getCatalogueNumber());
+        System.out.println(book.getTitle());
+        System.out.println(book.getAuthor());
     }   
 }
