@@ -26,7 +26,7 @@ public class Library
     public void RegisterOneBook(String title, String author, int CatalogueNumber){
         Book book = new Book(title, author, CatalogueNumber);
 
-        if(CheckBook(CatalogNumber)){
+        if(CheckBook(CatalogueNumber)){
             if(Check(CatalogueNumber)){
                 Book book = new Book(title, author, CatalogueNumber);
                 boolean result = registeredBook.add(book);
