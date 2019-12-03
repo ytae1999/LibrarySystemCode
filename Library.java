@@ -67,7 +67,7 @@ public class Library
         book.addLoan(loan);
         borrower.addLoan(loan);
     }
-    
+
     public void ReturnOneBook(int CatalogueNumber)
     {
         Iterator<Book> it = Books.iterator();      
@@ -78,30 +78,29 @@ public class Library
                 break;
             }     
         } 
+        Book book = it.next();
         Iterator<Loan> it2 = Loans.iterator();      
         while(it.hasNext()){        
             Loan loans = it2.next();     
-            if(loans.findName() == name)
+            if(loans.getBook() == book)
             {
                 break;
             }     
         } 
+        Loan loan = it2.next();
         Iterator<Borrower> it3 = registeredBorrowers.iterator();    
         while(it.hasNext()){        
             Borrower borrowers = it3.next();     
-            if(borrowers.getName() == name)
+            if(borrowers.getLoan() == loan)
             {
                 break;
             }     
         } 
-        
-        Book book = it.next();
-        Loan loan = it2.next(); 
+
         Borrower borrower = it3.next();
         book.delLoan();
         borrower.delLoan();
     }
-        
 
     public void DisplayBooksAvailableForLoan(Book book)
     {
@@ -127,18 +126,29 @@ public class Library
         } 
     }
 
-    public String DisplayBorrowersLoanBook(int CatalogueNumber)
+    public void DisplayBorrowersLoanBook(int CatalogueNumber)
     {
         Iterator<Loan> it = Loans.iterator();      
         while(it.hasNext()){        
             Loan loans = it.next();
-            if(loans.get)
-            return "";
+            if(loans.getBook().getCatalogueNumber() == CatalogueNumber)
+            {
+                loans.getBorrowerName();
+            }   
         } 
+        System.out.println("입력한 책에 대한 이용자의 이름 목록을 출력하였습니다.");
     }
 
-    public String DisplayBooksLoanedByBorrower(String name)
+    public void DisplayBooksLoanedByBorrower(String name)
     {
-        return "";
+        Iterator<Loan> it = Loans.iterator();      
+        while(it.hasNext()){        
+            Loan loans = it.next();
+            if(loans.getBorrower().getName() == name)
+            {
+                loans.getBook().display();
+            }   
+        } 
+        System.out.println("입력한 이용자에 대한 책의 목록을 출력합니다.");
     }
 } 

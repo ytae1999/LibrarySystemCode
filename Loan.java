@@ -25,8 +25,13 @@ public class Loan
         return this.borrower;
     }
     
-    public void getBorrowerName(Loan loan){
-        System.out.println(loan.getBorrower());
+    public Book getBook()
+    {
+        return this.book;
+    }
+    
+    public void getBorrowerName(){
+    System.out.println(this.getBorrower());
     }
     
     public void display(){
@@ -37,7 +42,4 @@ public class Loan
         System.out.println(returnDate + "까지 반납해주세요");
     }
     
-    public String findName(int CatalogueNumber){
-        return name;
-    }
 }

@@ -26,6 +26,10 @@ public class Borrower
         return this.loan;
     }
     
+    public Loan getLoan(){
+        return this.loan;
+    }
+    
     public String getName()
     {
         return this.name;
