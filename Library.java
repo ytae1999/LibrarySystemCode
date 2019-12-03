@@ -21,19 +21,7 @@ public class Library
 
     public void RegisterOneBook(String title, String author, int CatalogueNumber){
         Book book = new Book(title, author, CatalogueNumber);
-
-        if(CheckBook(CatalogueNumber)){
-            if(Check(CatalogueNumber)){
-                Book book = new Book(title, author, CatalogueNumber);
-                boolean result = registeredBook.add(book);
-                if(result == true){
-                    System.out.println("등록되었습니다.");
-                }
-                else{
-                    System.out.println("등록에 실패하였습니다.");
-                }
-            }
-        }
+        
     }
 
     public void LendOneBook(String name, int CatalogueNumber){
@@ -44,19 +32,17 @@ public class Library
 
     }
     
-    public boolean Check(String name,HashSet<Borrower> registeredBorrowers){
-        return true;
-    }
-    
-    public boolean Check(int CatalogueNumber,TreeSet<Book> Books){
-        return true;
-    }
-    
     public void DisplayBooksAvailableForLoan(Book book){
       
     }
 
     public void DisplayBooksAvailableOnLoan(Book book){
     }
+    
+    public String DisplayBorrowersLoanBook(int CatalogueNumber)
+    {
+        
+    }
+    
     
 }
