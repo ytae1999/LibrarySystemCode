@@ -2,7 +2,7 @@ import java.util.*;
 /**
  * Write a description of class Library here.
  *
- * @author (2018315033태영준,2018210083노승욱, 2018210025현기호, 2018210059송주호)
+ * @author (2018315033 태영준, 2018210083 노승욱, 2018210025 현기호, 2018210059 송주호)
  * @version (2019.11.29)
  */
 public class Library
@@ -17,79 +17,82 @@ public class Library
 
     public void RegisterOneBorrower(String name){
         Borrower borrower = new Borrower(name);
+        boolean result = contains(borrower);
+        if(result == false){
+            registeredBorrowers.add(borrower);
+            System.out.println("등록되었습니다.");
+        }
+        else{
+            borrower = null;
+            System.out.println("이미 등록되었습니다.");
+        }
     }
 
     public void RegisterOneBook(String title, String author, int CatalogueNumber){
         Book book = new Book(title, author, CatalogueNumber);
-<<<<<<< HEAD
-
-=======
->>>>>>> 28df8275687b8e8fc602a75e61a4a525144c94db
-    }
-
-    public void LendOneBook(String name, int CatalogueNumber){
-
-    } 
-
-    public void ReturnOneBook(int CatalogueNumber){
-
-    }
-<<<<<<< HEAD
-
-=======
-    
->>>>>>> 28df8275687b8e8fc602a75e61a4a525144c94db
-    public void DisplayBooksAvailableForLoan(Book book){
-<<<<<<< HEAD
-
-    }
-
-    public boolean Check(int CatalogueNumber,TreeSet<Book> Books){
-        return true;
-=======
->>>>>>> 28df8275687b8e8fc602a75e61a4a525144c94db
-    }
-
-    public boolean Check(int CatalogueNumber,TreeSet<Book> Books){
-        return true;
-    }
-        
-    public boolean Check(String name,HashSet<Borrower> registeredBorrowers){
-        return true;
-    }
-
-    public boolean Check(int CatalogueNumber,TreeSet<Book> Books){
-        return true;
-<<<<<<< HEAD
-
-=======
->>>>>>> 28df8275687b8e8fc602a75e61a4a525144c94db
-    }
-
-    public void DisplayBooksAvailableOnLoan(Book book){
-        Iterator it = Book.iterator();
-        while(it.hasNext() == false){
-            Book book = (Book)it.next();
-            if(book.getLoan() != null)
-                display();
+        boolean result = contains(book);
+        if(result == false){
+            Books.add(book);
+            System.out.println("등록되었습니다.");
+        }
+        else{
+            book = null;
+            System.out.println("이미 등록되었습니다.");
         }
     }
 
+    public void LendOneBook(String name, int CatalogueNumber)
+    {
+        Iterator<Book> it = Books.iterator();      
+        while(it.hasNext()){        
+            Book books = it.next();     
+            if(books.CatalogueNumber == CatalogueNumber)
+            {
+                Book book = getBook();//빌리려는 책
+            }     
+        } 
+        Iterator<Borrower> it = registeredBorrowers.iterator();      
+        while(it.hasNext()){        
+            Borrower borrowers = it.next();     
+            if(books.CatalogueNumber == CatalogueNumber)
+            {
+                Borrower borrower = getBorrower();//빌리려는 이용자
+            }     
+        } 
+        
+    }
+    
+    public void ReturnOneBook(int CatalogueNumber)
+    {
+
+    }
+        
+
     public void DisplayBooksAvailableForLoan(Book book){
-        Iterator it = Book.iterator();
-        while(it.hasNext() == true){
-            Book book = (Book)it.next();
-            if(book.getLoan() == null)
-                display();
+        Iterator<Book> it = Books.iterator();      
+        while(it.hasNext()){        
+            Book book = it.next();        
+            if(book.getLoan() == null)          
+                display(book);  
+        }   
+    }
+
+    public void DisplayBooksAvailableOnLoan(Book book){
+        Iterator<Book> it = Book.iterator();
+        while(it.hasNext()){
+            Book book = it.next();
+            if(book.getLoan() != null)
+                display(book);
         }
     }
 
     public String DisplayBorrowersLoanBook(int CatalogueNumber)
     {
-
-<<<<<<< HEAD
+        display();
     }
-=======
-    } 
->>>>>>> 28df8275687b8e8fc602a75e61a4a525144c94db
-}
+
+    public String DisplayBooksLoanedByBorrower(String name)
+    {
+
+    }
+} 
