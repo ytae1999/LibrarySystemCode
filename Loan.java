@@ -36,4 +36,8 @@ public class Loan
     public void printReturnDate(){
         System.out.println(returnDate + "까지 반납해주세요");
     }
+    
+    public String findName(int CatalogueNumber){
+        return name;
+    }
 }

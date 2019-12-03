@@ -78,20 +78,28 @@ public class Library
                 break;
             }     
         } 
-        Iterator<Borrower> it2 = registeredBorrowers.iterator();      
+        Iterator<Loan> it2 = Loans.iterator();      
         while(it.hasNext()){        
-            Borrower borrowers = it2.next();     
+            Loan loans = it2.next();     
+            if(loans.findName() == name)
+            {
+                break;
+            }     
+        } 
+        Iterator<Borrower> it3 = registeredBorrowers.iterator();    
+        while(it.hasNext()){        
+            Borrower borrowers = it3.next();     
             if(borrowers.getName() == name)
             {
                 break;
             }     
         } 
+        
         Book book = it.next();
-        Borrower borrower = it2.next();
-        Loan loan = new Loan(book, borrower);
-        Loans.add(loan);
-        book.addLoan(loan);
-        borrower.addLoan(loan);
+        Loan loan = it2.next(); 
+        Borrower borrower = it3.next();
+        book.delLoan();
+        borrower.delLoan();
     }
         
 
@@ -109,12 +117,24 @@ public class Library
 
     public void DisplayBooksAvailableOnLoan(Book book)
     {
-        
+        Iterator<Book> it = Books.iterator();      
+        while(it.hasNext()){        
+            Book books = it.next();     
+            if(books.getLoan() == null)
+            {
+                books.display();
+            }     
+        } 
     }
 
     public String DisplayBorrowersLoanBook(int CatalogueNumber)
     {
-        return "";
+        Iterator<Loan> it = Loans.iterator();      
+        while(it.hasNext()){        
+            Loan loans = it.next();
+            if(loans.get)
+            return "";
+        } 
     }
 
     public String DisplayBooksLoanedByBorrower(String name)
