@@ -1,9 +1,9 @@
-
+import java.util.TreeSet;
 /**
  * Write a description of class Book here.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author (2018315033태영준,2018210083노승욱, 2018210025현기호, 2018210059송주호)
+ * @version (2019.11.29)
  */
 public class Book
 {
@@ -17,18 +17,13 @@ public class Book
         this.title = title;
         this.author = author;
     }
-    public String toString(){
-        return "Book(" + CatalogueNumber + "," + title + "," + author + ")";
-    }
-    public void Check(String title, String author, int CatalogueNumber){
-        
-    }
-    public void getBook(int CatalogueNumber){
+    public Book getBook(int CatalogueNumber){
         
     }
     public void delLoan(){
         this.loan = null;
     }
     public void display(Book book){
+        
     }
 }
