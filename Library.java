@@ -21,7 +21,10 @@ public class Library
 
     public void RegisterOneBook(String title, String author, int CatalogueNumber){
         Book book = new Book(title, author, CatalogueNumber);
+<<<<<<< HEAD
         
+=======
+>>>>>>> 28df8275687b8e8fc602a75e61a4a525144c94db
     }
 
     public void LendOneBook(String name, int CatalogueNumber){
@@ -33,16 +36,57 @@ public class Library
     }
     
     public void DisplayBooksAvailableForLoan(Book book){
+<<<<<<< HEAD
       
+=======
+    }
+
+    public boolean Check(int CatalogueNumber,TreeSet<Book> Books){
+        return true;
+    }
+        
+    public boolean Check(String name,HashSet<Borrower> registeredBorrowers){
+        return true;
+    }
+
+    public boolean Check(int CatalogueNumber,TreeSet<Book> Books){
+        return true;
+>>>>>>> 28df8275687b8e8fc602a75e61a4a525144c94db
     }
 
     public void DisplayBooksAvailableOnLoan(Book book){
+<<<<<<< HEAD
     }
     
+=======
+        Iterator it = Book.iterator();
+        while(it.hasNext() == false){
+            Book book = (Book)it.next();
+            if(book.getLoan() != null)
+                display();
+        }
+    }
+
+    public void DisplayBooksAvailableForLoan(Book book){
+        Iterator it = Book.iterator();
+        while(it.hasNext() == true){
+            Book book = (Book)it.next();
+            if(book.getLoan() == null)
+                display();
+        }
+    }
+
+>>>>>>> 28df8275687b8e8fc602a75e61a4a525144c94db
     public String DisplayBorrowersLoanBook(int CatalogueNumber)
     {
+<<<<<<< HEAD
         
     }
     
     
 }
+=======
+
+    } 
+}
+>>>>>>> 28df8275687b8e8fc602a75e61a4a525144c94db
